@@ -1,0 +1,18 @@
+{% load static %}
+<!-- Footer -->
+<footer id="footer">
+	{% if is_index %}
+	<ul class="icons">
+		<li><a href="{% url 'mysite_last_index' indexes %}" ><span class="label" style="color:white;"><i class="fas fa-angle-double-left fa-3x" ></i></span></a></li>
+		<li><a href="{% url 'mysite_next_index' indexes %}" ><span class="label" style="color:red;"><i class="fas fa-angle-double-right fa-3x" ></i></span></a></li>
+	</ul>
+	{% endif %}
+	<div class="copyright">Copyright &copy; 2020.我的博客.</div>
+</footer>
+
+<!-- Scripts -->
+<script src="{% static 'mysite/assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'mysite/assets/js/jquery.scrolly.min.js' %}"></script>
+<script src="{% static 'mysite/assets/js/skel.min.js' %}"></script>
+<script src="{% static 'mysite/assets/js/util.js' %}"></script>
+<script src="{% static 'mysite/assets/js/main.js' %}"></script>

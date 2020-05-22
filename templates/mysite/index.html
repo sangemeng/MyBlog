@@ -1,0 +1,173 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- Banner -->
+<section id="banner">
+	<div class="inner">
+		<h1>春风得意马蹄急，一日看尽长安花。</h1>
+		<ul class="actions">
+			<li><a href="#one" class="button alt scrolly big">开始</a></li>
+		</ul>
+	</div>
+</section>
+
+{% if page_dict.1 %}
+<!-- One -->
+<article id="one" class="post style1">
+	<div class="image">
+		<img src="{{ MEDIA_URL }}/images/mysite/{{ page_dict.1.image }}" alt="" data-position="75% center" />
+	</div>
+	<div class="content">
+		<div class="inner">
+			<header>
+				<h2><a href="{% url 'mysite_page' page_dict.1.slug %}">{{ page_dict.1.title }}</a></h2>
+				<p class="info">By <a href="#">Admin</a></p>
+			</header>
+			<p>{{ page_dict.1.content | truncatechars:327 }}</p>
+			<ul class="actions">
+				<li><a href="{% url 'mysite_page' page_dict.1.slug %}" class="button alt">更多</a></li>
+			</ul>
+		</div>
+
+		<div class="postnav">
+			<a href="#" class="prev disabled"><span class="icon fa-chevron-up"></span></a>
+			<a href="#two" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+		</div>
+
+	</div>
+
+</article>
+{% endif %}
+
+{% if page_dict.2 %}
+<!-- Two -->
+<article id="two" class="post invert style1 alt">
+
+	<div class="image">
+		<img src="{{ MEDIA_URL }}/images/mysite/{{ page_dict.2.image }}" alt="" data-position="10% center" />
+	</div>
+
+	<div class="content">
+		<div class="inner">
+			<header>
+				<h2><a href="{% url 'mysite_page' page_dict.2.slug %}">{{ page_dict.2.title }}</a></h2>
+				<p class="info">By <a href="#">Admin</a></p>
+			</header>
+			<p>{{ page_dict.2.content | truncatechars:327 }}</p>
+			<ul class="actions">
+				<li><a href="{% url 'mysite_page' page_dict.2.slug %}" class="button alt">更多</a></li>
+			</ul>
+		</div>
+
+		<div class="postnav">
+			<a href="#one" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+			<a href="#three" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+		</div>
+
+	</div>
+</article>
+{% endif %}
+
+{% if page_dict.3 %}
+<!-- Three -->
+<article id="three" class="post style2">
+	<div class="image">
+		<img src="{{ MEDIA_URL }}/images/mysite/{{ page_dict.3.image }}" alt="" data-position="80% center" />
+	</div>
+	<div class="content">
+		<div class="inner">
+			<header>
+				<h2><a href="{% url 'mysite_page' page_dict.3.slug %}">{{ page_dict.3.title }}</a></h2>
+				<p class="info">By <a href="#">Admin</a></p>
+			</header>
+			<p>{{ page_dict.3.content | truncatechars:327 }}</p>
+			<ul class="actions">
+				<li><a href="{% url 'mysite_page' page_dict.3.slug %}" class="button alt">更多</a></li>
+			</ul>
+		</div>
+		<div class="postnav">
+			<a href="#two" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+			<a href="#four" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+		</div>
+	</div>
+</article>
+{% endif %}
+
+{% if page_dict.4 %}
+<!-- Four -->
+<article id="four" class="post invert style2 alt">
+	<div class="image">
+		<img src="{{ MEDIA_URL }}/images/mysite/{{ page_dict.4.image }}" alt="" data-position="60% center" />
+	</div>
+	<div class="content">
+		<div class="inner">
+			<header>
+				<h2><a href="{% url 'mysite_page' page_dict.4.slug %}">{{ page_dict.4.title }}</a></h2>
+				<p class="info">By <a href="#">Admin</a></p>
+			</header>
+			<p>{{ page_dict.4.content | truncatechars:327 }}</p>
+			<ul class="actions">
+				<li><a href="{% url 'mysite_page' page_dict.4.slug %}" class="button alt">更多</a></li>
+			</ul>
+		</div>
+		<div class="postnav">
+			<a href="#three" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+			<a href="#five" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+		</div>
+	</div>
+</article>
+{% endif %}
+
+{% if page_dict.5 %}
+<!-- Five -->
+<article id="five" class="post style3">
+	<div class="image">
+		<img src="{{ MEDIA_URL }}/images/mysite/{{ page_dict.5.image }}" alt="" data-position="5% center" />
+	</div>
+	<div class="content">
+		<div class="inner">
+			<header>
+				<h2><a href="{% url 'mysite_page' page_dict.5.slug %}">{{ page_dict.5.title }}</a></h2>
+				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
+			</header>
+			<p>{{ page_dict.5.content | truncatechars:327 }}</p>
+			<ul class="actions">
+				<li><a href="{% url 'mysite_page' page_dict.5.slug %}" class="button alt">更多</a></li>
+			</ul>
+		</div>
+		<div class="postnav">
+			<a href="#four" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+			<a href="#six" class="scrolly next"><span class="icon fa-chevron-down"></span></a>
+		</div>
+	</div>
+</article>
+{% endif %}
+
+{% if page_dict.6 %}
+<!-- Six -->
+<article id="six" class="post invert style3 alt">
+	<div class="image">
+		<img src="{{ MEDIA_URL }}/images/mysite/{{ page_dict.6.image }}" alt="" data-position="80% center" />
+	</div>
+	<div class="content">
+		<div class="inner">
+			<header>
+				<h2><a href="{% url 'mysite_page' page_dict.6.slug %}">{{ page_dict.6.title }}</a></h2>
+				<p class="info">By <a href="#">Admin</a></p>
+			</header>
+			<p>{{ page_dict.6.content | truncatechars:327 }}</p>
+			<ul class="actions">
+				<li><a href="{% url 'mysite_page' page_dict.6.slug %}" class="button alt">更多</a></li>
+			</ul>
+		</div>
+		<div class="postnav">
+			<a href="#five" class="scrolly prev"><span class="icon fa-chevron-up"></span></a>
+			<a href="#" class="scrolly next disabled"><span class="icon fa-chevron-down"></span></a>
+		</div>
+	</div>
+</article>
+{% endif %}
+
+
+{% endblock %}

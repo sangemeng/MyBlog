@@ -1,0 +1,17 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+{% load markdown_deux_tags %}
+{% block main %}
+
+<!-- Main -->
+<section id="main">
+	<div class="inner">
+		<header>
+			<h1>{{ pages.title }}</h1>
+			<p class="info">By <a href="#">Admin</a></p>
+		</header>
+		<p>{{ pages.content | markdown }}</p>
+	</div>
+</section>
+
+{% endblock %}

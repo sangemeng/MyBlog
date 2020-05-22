@@ -1,0 +1,54 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+{% block main %}
+<!-- Main -->
+<section id="main">
+	<div class="inner">
+
+		<hr/>
+		<!-- Text -->
+			<section>
+			{% for message in messages %}
+				<h4>{{ message.username }}</h4>
+				<blockquote>{{ message.content }}</blockquote>
+				{% empty %}
+				<h4>暂无留言</h4>
+			{% endfor %}
+			</section>
+		<hr/>
+
+		<!-- Form -->
+			<section>
+				<h3>发送留言</h3>
+				<form method="post" action="{% url 'mysite_add_message' %}">
+					{% csrf_token %}
+					<div class="row uniform 50%">
+						<div class="6u 12u$(xsmall)">
+							<input type="text" name="name" id="name" value="" placeholder="姓名" />
+						</div>
+						<div class="6u$ 12u$(xsmall)">
+							<input type="email" name="email" id="email" value="" placeholder="邮箱" />
+						</div>
+						<div class="12u$ 12u$(xsmall)">
+							<input type="text" name="subject" id="subject" value="" placeholder="主题" />
+						</div>
+
+						<div class="12u$">
+							<textarea name="message" id="message" placeholder="输入你的留言" rows="6"></textarea>
+						</div>
+						<div class="12u$">
+							<ul class="actions">
+								<li><input type="submit" value="留言" class="special" /></li>
+								<li><input type="reset" value="重置" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</section>
+
+
+
+	</div>
+</section>
+
+{% endblock %}
