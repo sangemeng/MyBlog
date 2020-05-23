@@ -44,6 +44,8 @@ def index_indexes(request, indexes):
 
 
 def last_index(request, indexes):
+    if indexes == 1:
+        return redirect('/')
     return redirect('/indexes={0}'.format(indexes - 1))
 
 

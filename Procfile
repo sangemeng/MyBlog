@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath MyBlog MyBlog.wsgi --log-file -
