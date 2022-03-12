@@ -6,7 +6,7 @@ django-cleanup==4.0.0
 django-markdown-deux==1.0.5
 django-uuslug==1.2.0
 markdown2==2.3.9
-Pillow==7.1.2
+Pillow==9.0.1
 python-slugify==4.0.0
 pytz==2020.1
 regex==2020.5.14
